@@ -1,0 +1,168 @@
+
+:root {
+  --primary-color: rgb(132, 14, 231);
+}
+
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+
+  background-color: rgb(34, 34, 34); /*Cor de fundo*/
+  color: white; /*Cor das letraas*/
+
+  max-width: 80rem; /*Ocupação máxima da tela*/
+  margin: 0 auto; /*Retira as margens*/
+  padding: 1.5rem; /*Coloca um preenchimento*/
+}
+
+header {
+  display: flex; /*Deixa os itens flexiveis na tela*/
+  flex-direction: row; /*Direção dos itens em linha*/
+  justify-content: space-between; /*Insere espeço entre os itens que estão dentro do header*/
+  align-items: center; /*Alinha os itens ao centro*/ 
+}
+
+#title {
+  flex-direction: column; /*Muda a direção dos itens que tem esse id*/
+  line-height: 0.1rem; /*Diminuiu espaçamento entre os itens*/
+}
+
+li{
+  display: inline-block; /*Bloqueia das linhas ficarem uma em baixo da outra*/
+  margin: 2rem; /*Margem dentro dos elementos*/
+}
+
+a {
+  color: white; /*Alterando a cor dos link's*/
+}
+a:hover {
+  color: var(--primary-color); /*Mudar a cor quando estiver com o mouse em cima*/
+  transition: 0.3ms all; /*Tempo para ocorrer a transição de cor*/
+}
+
+h1 {
+  font-weight: 200; /*Adina a fonte*/
+}
+
+.btn-contato {
+  border: 2px solid var(--primary-color); /*Criar a borda - primeiro a espessura, o modo e a cor*/
+  margin: 2rem; /*Margem a esquerda*/
+  padding: 1.6rem 3.2rem; /*Colocar o conteuda mais para 
+  dentro do botão*/
+  border-radius: 1.5rem; /*Arredondar as pontas*/
+
+  font-size: 1.4rem; /*Tamanho da fonte*/
+  font-weight: 700; /*Tipo da fonte*/
+  text-transform: uppercase; /*Transformar tudo em maiusculo*/
+  text-decoration: none; /*Tirar sublinhado*/
+  transition: background 200ms; /*Transição da cor de fundo*/
+}
+
+.btn-contato:hover{
+  background-color: var(--primary-color);
+  color: white;
+}
+
+main {
+  display: grid; /*Deixa os itens flexiveis na tela*/
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: 
+  'A B';
+  flex-direction: row; /*Direção dos itens em linha*/
+  margin-top: 5rem; /*Margem superior - Para dar um espaçamento do header*/
+}
+
+
+aside h2 {
+  font-size: 45px; /*Tamanho da fonte*/
+  line-height: 0.1rem;/*Diminuiu espaçamento entre os itens*/
+}
+
+span {
+  color: var(--primary-color); /*Alterar a cor da fonte*/
+}
+
+aside p {
+  line-height: 0.2rem;
+  max-width: 50rem;/*Faz com que o paragrafo tenha uma largura máxima*/
+  margin-bottom: 12rem; /*Espaça para o item abaixo*/
+}
+
+img {
+  width: 38rem; /*Tamanho*/
+  max-width: 96%; /*Proporção máxima*/
+  margin-bottom: 6rem;
+}
+
+.wrapper{
+  width: min(50rem, 100%); /*Temanho minimo da sessão services*/
+  margin-inline: auto;
+  padding-inline: 2.4rem;
+}
+/*---------- Services ----------*/
+
+.services header h2{
+  margin-bottom: 6rem; /*Margem abaixo do titulo*/
+  margin-left: 19rem; /*Margem a esqueda*/
+}
+
+.services .card{
+  display: flex; /*Deixa os itens flexiveis na tela*/
+  flex-direction: row; /*Direção dos itens em linha*/
+  gap: 3.2rem; /**Espaçamento entre os itens*/
+
+}
+
+.services .cards {
+  padding: 2.4rem;
+  border: 1px solid var(--primary-color); /*Borda*/
+  border-radius: 0.6rem; /*Arredondar a borda*/
+  width: 12rem; /*Largura*/
+  height: 12rem; /*Altura*/
+  margin-bottom: 16rem; /*Margem abaixo*/
+}
+
+/*---------- About ----------*/
+#about .wrapper {
+  display: grid;
+  grid-template-columns: 30rem 20rem;
+  grid-template-areas: 
+  'A B';
+  gap: 6.7rem;
+}
+
+#about .col-a {
+  grid-area: B;
+}
+
+#about .col-b{
+  grid-area: A;
+  align-self: center;
+}
+
+#about .content {
+  margin-top: 2.4rem;
+  margin-bottom: 12rem;
+}
+
+/*---------- Contact ----------*/
+
+#contact .wrapper {
+  display: grid;
+  grid-template-columns: 20rem 57.5rem;
+  grid-template-areas: 'A B';
+  text-align: left;
+}
+
+#contact ul {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 3.2rem;
+}
+
+#contact ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
